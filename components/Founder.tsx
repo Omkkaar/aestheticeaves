@@ -19,20 +19,8 @@ interface FounderProps {
 }
 
 const Founder: React.FC<FounderProps> = ({ onCTAClick }) => {
-  const [customImage, setCustomImage] = useState<string | null>(null);
-  const fileInputRef = useRef<HTMLInputElement>(null);
-
-  const handleImageUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const file = e.target.files?.[0];
-    if (file) {
-      const url = URL.createObjectURL(file);
-      setCustomImage(url);
-    }
-  };
-
-  const triggerUpload = () => {
-    fileInputRef.current?.click();
-  };
+  // Use static founder portrait from public assets
+  const staticFounderImage = '/assets/team/omkar-kulkarni.jpg.png';
 
   return (
     <SectionWrapper id="founder" className="bg-primary relative overflow-hidden py-0 md:py-0">
@@ -44,29 +32,17 @@ const Founder: React.FC<FounderProps> = ({ onCTAClick }) => {
         <div className="flex flex-col lg:flex-row items-stretch min-h-[850px]">
           {/* Portrait Image Slot */}
           <div className="relative w-full lg:w-[45%] min-h-[500px] lg:min-h-full overflow-hidden group">
-            <input 
-              type="file" 
-              ref={fileInputRef} 
-              onChange={handleImageUpload} 
-              accept="image/*" 
-              className="hidden" 
-            />
-            
-            <div className="absolute inset-0 cursor-pointer" onClick={triggerUpload}>
+            <div className="absolute inset-0">
               <img 
-                src={customImage || FOUNDER_IMAGE_SRC} 
+                src={staticFounderImage} 
                 alt={FOUNDER_NAME} 
                 className="w-full h-full object-cover object-top brightness-[0.85] transition-transform duration-[2s] group-hover:scale-105"
                 onError={(e) => e.currentTarget.src = FOUNDER_IMAGE_FALLBACK}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-primary via-primary/10 to-transparent lg:bg-gradient-to-r lg:from-transparent lg:to-primary" />
               
-              {/* Replace Portrait UI */}
-              <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col items-center justify-center">
-                <div className="w-16 h-16 rounded-full border border-white/30 flex items-center justify-center text-white text-2xl mb-4 group-hover:scale-110 transition-transform duration-500">
-                  +
-                </div>
-                <span className="text-white text-[9px] uppercase tracking-[0.6em] font-bold">Replace Portrait</span>
+              <div className="absolute inset-0 bg-black/20 opacity-100 transition-opacity flex flex-col items-center justify-center pointer-events-none">
+                <span className="text-white text-[9px] uppercase tracking-[0.6em] font-bold">Founder Portrait</span>
               </div>
             </div>
 

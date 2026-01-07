@@ -8,8 +8,7 @@ interface HeaderProps {
 const Header: React.FC<HeaderProps> = ({ onCTAClick }) => {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [logoPreview, setLogoPreview] = useState<string | null>(null);
-  const fileInputRef = useRef<HTMLInputElement>(null);
+  const [logoPreview] = useState<string | null>(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -39,28 +38,8 @@ const Header: React.FC<HeaderProps> = ({ onCTAClick }) => {
     >
       <div className="container mx-auto px-6 flex items-center justify-between">
         <div className="flex items-center gap-4">
-          <div 
-            onClick={() => fileInputRef.current?.click()}
-            className={`group relative overflow-hidden transition-all duration-300 cursor-pointer flex items-center justify-center border-2 border-dashed ${
-              logoPreview ? 'border-transparent' : isLightBackground ? 'border-primary/20 hover:border-primary/50' : 'border-white/20 hover:border-white/50'
-            } rounded-full ${scrolled ? 'h-12 w-12' : 'h-16 w-16'}`}
-          >
-            <input type="file" ref={fileInputRef} onChange={(e) => {
-              const file = e.target.files?.[0];
-              if (file) {
-                const reader = new FileReader();
-                reader.onloadend = () => setLogoPreview(reader.result as string);
-                reader.readAsDataURL(file);
-              }
-            }} accept="image/*" className="hidden" />
-            
-            {logoPreview ? (
-              <img src={logoPreview} alt={`${BRAND_NAME} Logo`} className="w-full h-full object-contain p-1" />
-            ) : (
-              <div className={`flex flex-col items-center justify-center ${isLightBackground ? 'text-primary' : 'text-white'}`}>
-                <span className="text-[7px] uppercase tracking-tighter font-bold">Logo</span>
-              </div>
-            )}
+          <div className={`group relative overflow-hidden transition-all duration-300 flex items-center justify-center rounded-full ${scrolled ? 'h-12 w-12' : 'h-16 w-16'}`}>
+            <img src="/public/assets/logo.png" alt={`${BRAND_NAME} Logo`} className="w-full h-full object-contain p-1" />
           </div>
 
           <div className="flex flex-col cursor-pointer" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>

@@ -11,22 +11,11 @@ interface PortfolioProps {
 const ReelItem: React.FC<{
   index: number;
   reelSrc: string | null;
-  onUpload: (url: string) => void;
   onVideoInteraction: () => void;
-}> = ({ index, reelSrc, onUpload, onVideoInteraction }) => {
-  const fileInputRef = useRef<HTMLInputElement>(null);
+}> = ({ index, reelSrc, onVideoInteraction }) => {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [isPlaying, setIsPlaying] = useState(true);
   const [isMuted, setIsMuted] = useState(true);
-
-  const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const file = e.target.files?.[0];
-    if (file) {
-      const url = URL.createObjectURL(file);
-      onUpload(url);
-      setIsPlaying(true);
-    }
-  };
 
   const togglePlay = (e: React.MouseEvent) => {
     e.stopPropagation();
@@ -49,19 +38,8 @@ const ReelItem: React.FC<{
 
   return (
     <div className="group animate-fade-in-up" style={{ animationDelay: `${index * 150}ms` }}>
-      <input 
-        type="file" 
-        ref={fileInputRef} 
-        onChange={handleFileChange} 
-        accept="video/*" 
-        className="hidden" 
-      />
-      
-      <div 
-        className="aspect-[9/16] bg-black/40 rounded-sm overflow-hidden group relative shadow-[0_30px_60px_rgba(0,0,0,0.5)] cursor-pointer ring-1 ring-white/10 hover:ring-secondary/30 transition-all duration-500"
-        onClick={() => fileInputRef.current?.click()}
-      >
-        {reelSrc ? (
+      <div className="aspect-[9/16] bg-black/40 rounded-sm overflow-hidden group relative shadow-[0_30px_60px_rgba(0,0,0,0.5)] transition-all duration-500">
+          {reelSrc ? (
           <>
             <video
               ref={videoRef}
@@ -133,38 +111,14 @@ const ReelItem: React.FC<{
 const Portfolio: React.FC<PortfolioProps> = ({ onVideoInteraction, onCTAClick }) => {
   const [lightboxSrc, setLightboxSrc] = useState<string | null>(null);
   const [customPortfolio, setCustomPortfolio] = useState<typeof PORTFOLIO_ITEMS>(PORTFOLIO_ITEMS);
-  const [reels, setReels] = useState<(string | null)[]>(new Array(6).fill(null));
-  
-  const imageUploadRef = useRef<HTMLInputElement>(null);
-  const [activeImageIdx, setActiveImageIdx] = useState<number | null>(null);
-
-  const handleReelUpload = (url: string, index: number) => {
-    const newReels = [...reels];
-    newReels[index] = url;
-    setReels(newReels);
-    onVideoInteraction();
-  };
-
-  const handleImageUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const file = e.target.files?.[0];
-    if (file && activeImageIdx !== null) {
-      const url = URL.createObjectURL(file);
-      const updatedPortfolio = [...customPortfolio];
-      updatedPortfolio[activeImageIdx] = {
-        ...updatedPortfolio[activeImageIdx],
-        src: url,
-        alt: `Custom Project Image ${activeImageIdx + 1}`
-      };
-      setCustomPortfolio(updatedPortfolio);
-      setActiveImageIdx(null);
-    }
-  };
-
-  const triggerImageUpload = (idx: number, e: React.MouseEvent) => {
-    e.stopPropagation();
-    setActiveImageIdx(idx);
-    imageUploadRef.current?.click();
-  };
+  const [reels] = useState<(string | null)[]>([
+    '/assets/reels/reel-01.mp4.mp4',
+    '/assets/reels/reel-02.mp4.mp4',
+    '/assets/reels/reel-03.mp4.mp4',
+    '/assets/reels/reel-04.mp4.mp4',
+    '/assets/reels/reel-05.mp4.mp4',
+    '/assets/reels/reel-06.mp4.mp4',
+  ]);
 
   const getGridClasses = (index: number) => {
     const layoutPatterns = [
@@ -191,13 +145,7 @@ const Portfolio: React.FC<PortfolioProps> = ({ onVideoInteraction, onCTAClick })
         </p>
       </div>
 
-      <input 
-        type="file" 
-        ref={imageUploadRef} 
-        onChange={handleImageUpload} 
-        accept="image/*" 
-        className="hidden" 
-      />
+      {/* Images and reels are served from the public assets folder; no user uploads allowed */}
 
       <div className="mb-40">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 auto-rows-[160px] md:auto-rows-[250px]">
@@ -214,14 +162,7 @@ const Portfolio: React.FC<PortfolioProps> = ({ onVideoInteraction, onCTAClick })
                 onClick={() => setLightboxSrc(item.src)}
               />
               
-              <div className="absolute top-4 right-4 z-20 opacity-0 group-hover:opacity-100 transition-opacity">
-                <button 
-                  onClick={(e) => triggerImageUpload(idx, e)}
-                  className="bg-white/90 backdrop-blur-sm text-primary px-3 py-1.5 text-[8px] font-bold uppercase tracking-widest shadow-xl hover:bg-secondary hover:text-white transition-colors"
-                >
-                  Replace Photo
-                </button>
-              </div>
+              
 
               <div className="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-all duration-700 pointer-events-none" />
               <div className="absolute inset-6 border border-white/20 opacity-0 group-hover:opacity-100 transition-all duration-700 pointer-events-none" />
@@ -262,7 +203,6 @@ const Portfolio: React.FC<PortfolioProps> = ({ onVideoInteraction, onCTAClick })
                  key={idx} 
                  index={idx} 
                  reelSrc={reelSrc} 
-                 onUpload={(url) => handleReelUpload(url, idx)} 
                  onVideoInteraction={onVideoInteraction}
                />
              ))}

@@ -11,20 +11,11 @@ interface HeroProps {
 }
 
 const Hero: React.FC<HeroProps> = ({ onCTAClick }) => {
-  const [heroVideo, setHeroVideo] = useState<string | null>(null);
+  const [heroVideo, setHeroVideo] = useState<string | null>('/assets/hero/hero-01.mp4.mp4');
   const [isPlaying, setIsPlaying] = useState(true);
   const [isMuted, setIsMuted] = useState(true);
-  const videoInputRef = useRef<HTMLInputElement>(null);
   const videoRef = useRef<HTMLVideoElement>(null);
 
-  const handleVideoUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const file = e.target.files?.[0];
-    if (file) {
-      const url = URL.createObjectURL(file);
-      setHeroVideo(url);
-      setIsPlaying(true);
-    }
-  };
 
   const togglePlay = (e: React.MouseEvent) => {
     e.stopPropagation();
@@ -49,17 +40,7 @@ const Hero: React.FC<HeroProps> = ({ onCTAClick }) => {
   return (
     <div className="relative w-full h-screen bg-black flex flex-col overflow-hidden">
       {/* Background Layer: Single Horizontal Cinematic Video */}
-      <div 
-        className="absolute inset-0 z-0 group cursor-pointer"
-        onClick={() => videoInputRef.current?.click()}
-      >
-        <input 
-          type="file" 
-          ref={videoInputRef} 
-          onChange={handleVideoUpload} 
-          accept="video/*" 
-          className="hidden" 
-        />
+      <div className="absolute inset-0 z-0 group">
         
         {heroVideo ? (
           <video 

@@ -87,26 +87,17 @@ export const METRICS: MetricItem[] = [
 // PORTFOLIO SECTION
 // ==========================================
 export const PORTFOLIO_ITEMS: PortfolioItem[] = [
-  { id: 1, type: 'image', src: 'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&q=80', alt: 'Living Room TV Unit with Cove Lighting' },
-  { id: 2, type: 'image', src: 'https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&q=80', alt: 'Contemporary Lounge with Floral Wallpaper' },
-  { id: 3, type: 'image', src: 'https://images.unsplash.com/photo-1617806118233-f8e187f43394?auto=format&fit=crop&q=80', alt: 'Luxe Dining with Marble & Gold Detail' },
-  { id: 4, type: 'image', src: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80', alt: '4-Story Modern Architecture Villa' },
-  { id: 5, type: 'image', src: 'https://images.unsplash.com/photo-1618221195710-dd6b41faeaa6?auto=format&fit=crop&q=80', alt: 'Wave Art Feature Wall Living Space' },
-  { id: 6, type: 'image', src: 'https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&q=80', alt: 'Minimalist Lounge with Chess Table' },
-  { id: 7, type: 'image', src: 'https://images.unsplash.com/photo-1615529182904-14819c35db37?auto=format&fit=crop&q=80', alt: 'Bespoke Chess Set Detail' },
-  { id: 8, type: 'image', src: 'https://images.unsplash.com/photo-1616594111701-47d5271d8a0c?auto=format&fit=crop&q=80', alt: 'Master Suite with Purple Arch & White Wardrobes' },
-  { id: 19, type: 'image', src: 'https://images.unsplash.com/photo-1616047006789-82af888307db?auto=format&fit=crop&q=80', alt: 'Modern Kitchen with Fluted Glass Detail' },
-  { id: 20, type: 'image', src: 'https://images.unsplash.com/photo-1617805899941-864a66a36750?auto=format&fit=crop&q=80', alt: 'Grand Living with Marble & Tufted Sofa' },
-  { id: 9, type: 'image', src: 'https://images.unsplash.com/photo-1615876234886-fd9a39ca979b?auto=format&fit=crop&q=80', alt: 'Teal Headboard & Wood Slat Bedroom' },
-  { id: 10, type: 'image', src: 'https://images.unsplash.com/photo-1617103996702-96ff29b1c467?auto=format&fit=crop&q=80', alt: 'Sliding Gloss Wardrobe with Tan Inlay' },
-  { id: 11, type: 'image', src: 'https://images.unsplash.com/photo-1616137422495-1e9e46e2aa77?auto=format&fit=crop&q=80', alt: 'Beige Minimalist Bedroom Sanctuary' },
-  { id: 12, type: 'image', src: 'https://images.unsplash.com/photo-1618221414639-d47da664125f?auto=format&fit=crop&q=80', alt: 'Bedroom with Geometric Panelled Wall' },
-  { id: 13, type: 'image', src: 'https://images.unsplash.com/photo-1618219908412-a29a1bb7b86e?auto=format&fit=crop&q=80', alt: 'Back-lit Ganesha Mandir Unit' },
-  { id: 14, type: 'image', src: 'https://images.unsplash.com/photo-1615873968403-8a7a18755b7f?auto=format&fit=crop&q=80', alt: 'Marble Feature Wall with Built-in Bench' },
-  { id: 15, type: 'image', src: 'https://images.unsplash.com/photo-1616046229478-9901c5536a45?auto=format&fit=crop&q=80', alt: 'Dining Corner with Green Booth Seating' },
-  { id: 16, type: 'image', src: 'https://images.unsplash.com/photo-1617806118233-f8e187f43394?auto=format&fit=crop&q=80', alt: 'Wardrobes with Custom Arch Graphics' },
-  { id: 17, type: 'image', src: 'https://images.unsplash.com/photo-1617805934502-3f1146747d6e?auto=format&fit=crop&q=80', alt: 'Circular Gold Wall Art Bedroom' },
-  { id: 18, type: 'image', src: 'https://images.unsplash.com/photo-1617805959737-23a55bbc7b19?auto=format&fit=crop&q=80', alt: '3D Textured Feature Wall Bedroom' }
+  { id: 1, type: 'image', src: '/public/assets/portfolio/images/interior-01.jpg.jpg', alt: 'Living Room TV Unit with Cove Lighting' },
+  { id: 2, type: 'image', src: '/public/assets/portfolio/images/interior-02.jpg.jpg', alt: 'Contemporary Lounge with Floral Wallpaper' },
+  { id: 3, type: 'image', src: '/public/assets/portfolio/images/interior-03.jpg.jpeg', alt: '4-Story Modern Architecture Villa' },
+  { id: 6, type: 'image', src: '/public/assets/portfolio/images/interior-06.jpg.jpg', alt: 'Minimalist Lounge with Chess Table' },
+  { id: 7, type: 'image', src: '/public/assets/portfolio/images/interior-07.jpg.jpg', alt: 'Bespoke Chess Set Detail' },
+  { id: 10, type: 'image', src: '/public/assets/portfolio/images/interior-10.jpg.jpg', alt: 'Sliding Gloss Wardrobe with Tan Inlay' },
+  { id: 11, type: 'image', src: '/public/assets/portfolio/images/interior-11.jpg.jpg', alt: 'Beige Minimalist Bedroom Sanctuary' },
+  { id: 12, type: 'image', src: '/public/assets/portfolio/images/interior-12.jpg.jpg', alt: 'Bedroom with Geometric Panelled Wall' },
+  { id: 13, type: 'image', src: '/public/assets/portfolio/images/interior-13.jpg.jpg', alt: 'Back-lit Ganesha Mandir Unit' },
+  { id: 14, type: 'image', src: '/public/assets/portfolio/images/interior-14.jpg.jpg', alt: 'Marble Feature Wall with Built-in Bench' },
+  { id: 15, type: 'image', src: '/public/assets/portfolio/images/interior-15.jpg.jpg', alt: 'Dining Corner with Green Booth Seating' }
 ];
 
 // Portfolio YouTube Video IDs (Fetched from official channel shorts)

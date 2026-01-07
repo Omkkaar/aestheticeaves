@@ -4,98 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Aesthetic Eaves | Architects & Interior Designers</title>
-    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              primary: '#5D0E1D', // Deep Red
-              secondary: '#C5A059', // Gold Accent
-              base: '#FFFFFF', // White
-              dark: '#1a1a1a',
-              light: '#f9fafb',
-            },
-            fontFamily: {
-              serif: ['"Playfair Display"', 'serif'],
-              sans: ['"Montserrat"', 'sans-serif'],
-            },
-            container: {
-              center: true,
-              padding: '1rem',
-              screens: {
-                sm: '640px',
-                md: '768px',
-                lg: '1024px',
-                xl: '1280px',
-              },
-            },
-            animation: {
-              'fade-in-up': 'fadeInUp 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards',
-              'marquee': 'marquee 60s linear infinite',
-            },
-            keyframes: {
-              fadeInUp: {
-                '0%': { opacity: '0', transform: 'translateY(40px)' },
-                '100%': { opacity: '1', transform: 'translateY(0)' },
-              },
-              marquee: {
-                '0%': { transform: 'translateX(0)' },
-                '100%': { transform: 'translateX(-50%)' },
-              }
-            }
-          },
-        },
-      }
-    </script>
-    <style>
-      /* Smooth scrolling for anchor links */
-      html {
-        scroll-behavior: smooth;
-      }
-      /* Custom Scrollbar */
-      ::-webkit-scrollbar {
-        width: 8px;
-      }
-      ::-webkit-scrollbar-track {
-        background: #f1f1f1;
-      }
-      ::-webkit-scrollbar-thumb {
-        background: #C5A059;
-        border-radius: 4px;
-      }
-      ::-webkit-scrollbar-thumb:hover {
-        background: #5D0E1D;
-      }
-      
-      .hide-scrollbar::-webkit-scrollbar {
-        display: none;
-      }
-      .hide-scrollbar {
-        -ms-overflow-style: none;
-        scrollbar-width: none;
-      }
-      
-      .animation-delay-100 { animation-delay: 100ms; }
-      .animation-delay-200 { animation-delay: 200ms; }
-      .animation-delay-300 { animation-delay: 300ms; }
-      .animation-delay-400 { animation-delay: 400ms; }
-      .animation-delay-500 { animation-delay: 500ms; }
-    </style>
-  <script type="importmap">
-{
-  "imports": {
-    "react": "https://esm.sh/react@^19.2.3",
-    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
-    "react/": "https://esm.sh/react@^19.2.3/"
-  }
-}
-</script>
-</head>
+    <!-- Tailwind is configured locally for production. Styles are imported from index.css -->
+  </head>
   <body class="bg-base text-dark antialiased">
     <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
   </body>
 </html>
