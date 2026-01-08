@@ -87,17 +87,17 @@ export const METRICS: MetricItem[] = [
 // PORTFOLIO SECTION
 // ==========================================
 export const PORTFOLIO_ITEMS: PortfolioItem[] = [
-  { id: 1, type: 'image', src: '/public/assets/portfolio/images/interior-01.jpg.jpg', alt: 'Living Room TV Unit with Cove Lighting' },
-  { id: 2, type: 'image', src: '/public/assets/portfolio/images/interior-02.jpg.jpg', alt: 'Contemporary Lounge with Floral Wallpaper' },
-  { id: 3, type: 'image', src: '/public/assets/portfolio/images/interior-03.jpg.jpeg', alt: '4-Story Modern Architecture Villa' },
-  { id: 6, type: 'image', src: '/public/assets/portfolio/images/interior-06.jpg.jpg', alt: 'Minimalist Lounge with Chess Table' },
-  { id: 7, type: 'image', src: '/public/assets/portfolio/images/interior-07.jpg.jpg', alt: 'Bespoke Chess Set Detail' },
-  { id: 10, type: 'image', src: '/public/assets/portfolio/images/interior-10.jpg.jpg', alt: 'Sliding Gloss Wardrobe with Tan Inlay' },
-  { id: 11, type: 'image', src: '/public/assets/portfolio/images/interior-11.jpg.jpg', alt: 'Beige Minimalist Bedroom Sanctuary' },
-  { id: 12, type: 'image', src: '/public/assets/portfolio/images/interior-12.jpg.jpg', alt: 'Bedroom with Geometric Panelled Wall' },
-  { id: 13, type: 'image', src: '/public/assets/portfolio/images/interior-13.jpg.jpg', alt: 'Back-lit Ganesha Mandir Unit' },
-  { id: 14, type: 'image', src: '/public/assets/portfolio/images/interior-14.jpg.jpg', alt: 'Marble Feature Wall with Built-in Bench' },
-  { id: 15, type: 'image', src: '/public/assets/portfolio/images/interior-15.jpg.jpg', alt: 'Dining Corner with Green Booth Seating' }
+  { id: 1, type: 'image', src: '/assets/portfolio/images/interior-01.jpg.jpg', alt: 'Living Room TV Unit with Cove Lighting' },
+  { id: 2, type: 'image', src: '/assets/portfolio/images/interior-02.jpg.jpg', alt: 'Contemporary Lounge with Floral Wallpaper' },
+  { id: 3, type: 'image', src: '/assets/portfolio/images/interior-03.jpg.jpeg', alt: '4-Story Modern Architecture Villa' },
+  { id: 6, type: 'image', src: '/assets/portfolio/images/interior-06.jpg.jpg', alt: 'Minimalist Lounge with Chess Table' },
+  { id: 7, type: 'image', src: '/assets/portfolio/images/interior-07.jpg.jpg', alt: 'Bespoke Chess Set Detail' },
+  { id: 10, type: 'image', src: '/assets/portfolio/images/interior-10.jpg.jpg', alt: 'Sliding Gloss Wardrobe with Tan Inlay' },
+  { id: 11, type: 'image', src: '/assets/portfolio/images/interior-11.jpg.jpg', alt: 'Beige Minimalist Bedroom Sanctuary' },
+  { id: 12, type: 'image', src: '/assets/portfolio/images/interior-12.jpg.jpg', alt: 'Bedroom with Geometric Panelled Wall' },
+  { id: 13, type: 'image', src: '/assets/portfolio/images/interior-13.jpg.jpg', alt: 'Back-lit Ganesha Mandir Unit' },
+  { id: 14, type: 'image', src: '/assets/portfolio/images/interior-14.jpg.jpg', alt: 'Marble Feature Wall with Built-in Bench' },
+  { id: 15, type: 'image', src: '/assets/portfolio/images/interior-15.jpg.jpg', alt: 'Dining Corner with Green Booth Seating' }
 ];
 
 // Portfolio YouTube Video IDs (Fetched from official channel shorts)
