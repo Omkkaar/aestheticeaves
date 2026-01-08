@@ -39,7 +39,7 @@ const Header: React.FC<HeaderProps> = ({ onCTAClick }) => {
       <div className="container mx-auto px-6 flex items-center justify-between">
         <div className="flex items-center gap-4">
           <div className={`group relative overflow-hidden transition-all duration-300 flex items-center justify-center rounded-full ${scrolled ? 'h-12 w-12' : 'h-16 w-16'}`}>
-            <img src="/public/assets/logo.png" alt={`${BRAND_NAME} Logo`} className="w-full h-full object-contain p-1" />
+            <img src="/assets/logo.png" alt={`${BRAND_NAME} Logo`} className="w-full h-full object-contain p-1" />
           </div>
 
           <div className="flex flex-col cursor-pointer" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>

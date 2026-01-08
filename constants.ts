@@ -90,14 +90,24 @@ export const PORTFOLIO_ITEMS: PortfolioItem[] = [
   { id: 1, type: 'image', src: '/assets/portfolio/images/interior-01.jpg.jpg', alt: 'Living Room TV Unit with Cove Lighting' },
   { id: 2, type: 'image', src: '/assets/portfolio/images/interior-02.jpg.jpg', alt: 'Contemporary Lounge with Floral Wallpaper' },
   { id: 3, type: 'image', src: '/assets/portfolio/images/interior-03.jpg.jpeg', alt: '4-Story Modern Architecture Villa' },
-  { id: 6, type: 'image', src: '/assets/portfolio/images/interior-06.jpg.jpg', alt: 'Minimalist Lounge with Chess Table' },
-  { id: 7, type: 'image', src: '/assets/portfolio/images/interior-07.jpg.jpg', alt: 'Bespoke Chess Set Detail' },
-  { id: 10, type: 'image', src: '/assets/portfolio/images/interior-10.jpg.jpg', alt: 'Sliding Gloss Wardrobe with Tan Inlay' },
-  { id: 11, type: 'image', src: '/assets/portfolio/images/interior-11.jpg.jpg', alt: 'Beige Minimalist Bedroom Sanctuary' },
-  { id: 12, type: 'image', src: '/assets/portfolio/images/interior-12.jpg.jpg', alt: 'Bedroom with Geometric Panelled Wall' },
-  { id: 13, type: 'image', src: '/assets/portfolio/images/interior-13.jpg.jpg', alt: 'Back-lit Ganesha Mandir Unit' },
-  { id: 14, type: 'image', src: '/assets/portfolio/images/interior-14.jpg.jpg', alt: 'Marble Feature Wall with Built-in Bench' },
-  { id: 15, type: 'image', src: '/assets/portfolio/images/interior-15.jpg.jpg', alt: 'Dining Corner with Green Booth Seating' }
+  { id: 4, type: 'image', src: '/assets/portfolio/images/interior-04.jpg.jpg', alt: 'Minimalist Lounge with Chess Table' },
+  { id: 5, type: 'image', src: '/assets/portfolio/images/interior-05.jpg.jpg', alt: 'Bespoke Chess Set Detail' },
+  { id: 6, type: 'image', src: '/assets/portfolio/images/interior-06.jpg.jpg', alt: 'Sliding Gloss Wardrobe with Tan Inlay' },
+  { id: 7, type: 'image', src: '/assets/portfolio/images/interior-07.jpg.jpg', alt: 'Beige Minimalist Bedroom Sanctuary' },
+  { id: 8, type: 'image', src: '/assets/portfolio/images/interior-08.jpg.jpg', alt: 'Bedroom with Geometric Panelled Wall' },
+  { id: 9, type: 'image', src: '/assets/portfolio/images/interior-09.jpg.jpg', alt: 'Back-lit Ganesha Mandir Unit' },
+  { id: 10, type: 'image', src: '/assets/portfolio/images/interior-10.jpg.jpg', alt: 'Marble Feature Wall with Built-in Bench' },
+  { id: 11, type: 'image', src: '/assets/portfolio/images/interior-11.jpg.jpg', alt: 'Dining Corner with Green Booth Seating' },
+    { id: 12, type: 'image', src: '/assets/portfolio/images/interior-12.jpg.jpg', alt: 'Dining Corner with Green Booth Seating' },
+  { id: 13, type: 'image', src: '/assets/portfolio/images/interior-13.jpg.jpg', alt: 'Dining Corner with Green Booth Seating' },
+  { id: 14, type: 'image', src: '/assets/portfolio/images/interior-14.jpg.jpg', alt: 'Modern Kitchen with Island Counter' },
+  { id: 15, type: 'image', src: '/assets/portfolio/images/interior-15.jpg.jpg', alt: 'Elegant Bathroom with Back-lit Mirror' },
+  { id: 16, type: 'image', src: '/assets/portfolio/images/interior-16.jpg.jpg', alt: 'Contemporary Living Room Setup' },  
+    { id: 17, type: 'image', src: '/assets/portfolio/images/interior-17.jpg.jpg', alt: 'Dining Corner with Green Booth Seating' },
+  { id: 18, type: 'image', src: '/assets/portfolio/images/interior-18.jpg.jpg', alt: 'Cozy Lounge Area with Accent Lighting' },
+    { id: 19, type: 'image', src: '/assets/portfolio/images/interior-19.jpg.jpeg', alt: 'Dining Corner with Green Booth Seating' },
+  { id: 20, type: 'image', src: '/assets/portfolio/images/interior-20.jpg.jpg', alt: 'Dining Corner with Green Booth Seating' },
+
 ];
 
 // Portfolio YouTube Video IDs (Fetched from official channel shorts)
